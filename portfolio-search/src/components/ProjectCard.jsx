@@ -2,6 +2,7 @@ import { titleCase } from '../lib/format'
 
 // Card from the "Projects Found" frame: blue gradient tile with tag pills bottom-right.
 // The sheet has no project imagery yet, so the project name sits on the tile.
+// Only the sheet's Brand Name, Industry and tags columns are shown.
 export default function ProjectCard({ project, tags }) {
   return (
     <article className="relative aspect-[432/434.2] w-full overflow-hidden">
@@ -16,12 +17,9 @@ export default function ProjectCard({ project, tags }) {
       <div className="bg-grain absolute inset-0 opacity-25 mix-blend-overlay" />
 
       <div className="relative h-full p-5 sm:p-6">
-        <div>
-          <h3 className="text-[26px] leading-tight font-semibold tracking-[-0.9px] text-[#06213a] sm:text-[30px]">
-            {project.name}
-          </h3>
-          <p className="mt-2 line-clamp-3 text-[15px] leading-snug text-[#06213a]/70">{project.description}</p>
-        </div>
+        <h3 className="text-[26px] leading-tight font-semibold tracking-[-0.9px] text-[#06213a] sm:text-[30px]">
+          {project.name}
+        </h3>
 
         <ul className="absolute right-3 bottom-3 left-3 flex flex-wrap-reverse justify-end gap-2 sm:right-4 sm:bottom-[19px] sm:left-4 sm:gap-4">
           {tags.map((tag) => (

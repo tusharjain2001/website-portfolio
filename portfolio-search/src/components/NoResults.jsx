@@ -1,6 +1,6 @@
 import ScrollHint from './ScrollHint'
 
-export default function NoResults({ onReset }) {
+export default function NoResults({ onRefine }) {
   return (
     <>
       <div className="flex animate-fade-up flex-col items-center px-4 text-center">
@@ -9,10 +9,10 @@ export default function NoResults({ onReset }) {
         </h1>
         <button
           type="button"
-          onClick={onReset}
+          onClick={onRefine}
           className="mt-2 text-base text-brand-blue underline-offset-4 transition hover:underline"
         >
-          ← Try another search
+          ← Change your tags
         </button>
       </div>
 

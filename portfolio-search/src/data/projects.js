@@ -4,11 +4,6 @@ export const projects = [
     "id": "wattle-physio",
     "name": "Wattle Physio",
     "industry": "Healthcare",
-    "description": "A visual identity and website design project for Wattle Physio, a physiotherapy clinic, encompassing a nature-inspired logo, a compact logo kit for consistent brand application, and a responsive website designed to make booking appointments simple for patients.",
-    "services": [
-      "Logo Design",
-      "Website Design"
-    ],
     "tags": [
       "physiotherapy branding",
       "physiotherapy clinic branding",
@@ -48,12 +43,6 @@ export const projects = [
     "id": "via-wind",
     "name": "Via Wind",
     "industry": "Manufacturing",
-    "description": "A brand identity project for Viawind, a wind turbine wing manufacturer, including logo design, a logo kit, detailed brand guidelines, and a corporate brochure to establish a professional, industrial visual identity for B2B communications.",
-    "services": [
-      "Logo Design",
-      "Branding",
-      "Basic Print Design"
-    ],
     "tags": [
       "renewable energy branding",
       "wind energy branding",
@@ -96,13 +85,6 @@ export const projects = [
     "id": "strateaura",
     "name": "StrateAura",
     "industry": "Education",
-    "description": "A full brand rollout for Strateaura, an educator and consultant, spanning a personal website, print collateral (brochure, business cards, letterhead), and digital touchpoints (social media grid, LinkedIn cover, email signature) to present a consistent, professional presence everywhere.",
-    "services": [
-      "Website Design",
-      "Basic Print Design",
-      "Presentation Design",
-      "Social Media Content"
-    ],
     "tags": [
       "education branding",
       "edtech branding",
@@ -147,10 +129,6 @@ export const projects = [
     "id": "arani",
     "name": "Arani",
     "industry": "Entertainment & Media",
-    "description": "Arani is an Indian heritage and community focused magazine/brand with a strong emphasis on visual storytelling and craftsmanship.",
-    "services": [
-      "Publication"
-    ],
     "tags": [
       "Editorial Flipbook",
       "Art Direction",
@@ -176,12 +154,6 @@ export const projects = [
     "id": "infiled",
     "name": "INFiLED",
     "industry": "LED Display & Visual Solutions",
-    "description": "INFiLED is a global LED display manufacturer delivering high-performance visual solutions for corporate, retail, events, DOOH, control rooms, and XR & virtual production. With a focus on engineering, innovation, and immersive visual experiences, the brand develops display technologies designed for diverse professional environments.",
-    "services": [
-      "Static Ad Design",
-      "Social Media Content",
-      "Publication"
-    ],
     "tags": [
       "B2B",
       "Technology",

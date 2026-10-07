@@ -1,30 +1,31 @@
-// Quick-search chips on the hero, mapped to the service columns in "Portfolio List.xlsx".
-// Rows match the three chip rows in the Figma design.
+// Quick-search chips on the hero. Rows match the three chip rows in the Figma design.
+// A chip matches a project when any of its keywords is found (as whole words) in the
+// project's tags or industry. Without `keywords`, the label itself is used.
 export const categoryRows = [
   [
-    { label: 'Logo', service: 'Logo Design' },
-    { label: 'Branding', service: 'Branding' },
-    { label: 'Website', service: 'Website Design' },
-    { label: 'App', service: 'App Design' },
-    { label: 'Emailer & Newsletter', service: 'Emailer & Newsletter' },
-    { label: 'Print Design', service: 'Basic Print Design' },
-    { label: 'Event Booth & Carousel', service: 'Event Booth & Carousel' },
+    { label: 'Logo' },
+    { label: 'Branding' },
+    { label: 'Website', keywords: ['website', 'web design'] },
+    { label: 'App', keywords: ['app'] },
+    { label: 'Emailer & Newsletter', keywords: ['emailer', 'newsletter'] },
+    { label: 'Print Design', keywords: ['print'] },
+    { label: 'Event Booth & Carousel', keywords: ['event booth', 'carousel'] },
   ],
   [
-    { label: 'Presentation', service: 'Presentation Design' },
-    { label: 'Pitch Deck', service: 'Pitch Deck Design' },
-    { label: 'Static Ad', service: 'Static Ad Design' },
-    { label: 'Video Ad', service: 'Video Ad Design' },
-    { label: 'Social Media Content', service: 'Social Media Content' },
-    { label: 'Publication', service: 'Publication' },
-    { label: '2D Animation Video', service: '2D Animation Video' },
+    { label: 'Presentation' },
+    { label: 'Pitch Deck' },
+    { label: 'Static Ad' },
+    { label: 'Video Ad' },
+    { label: 'Social Media Content', keywords: ['social media'] },
+    { label: 'Publication' },
+    { label: '2D Animation Video', keywords: ['2d animation', 'animation video'] },
   ],
   [
-    { label: 'Motion Graphics', service: 'Motion Graphic Design' },
-    { label: 'Proposal & Docs', service: 'Proposal & Doc Design' },
-    { label: 'Annual Report', service: 'Annual Report Design' },
-    { label: 'Infographics', service: 'Infographic Design' },
-    { label: 'Corporate Video', service: 'Corporate Video Design' },
-    { label: 'Packaging Design', service: 'Packaging Design' },
+    { label: 'Motion Graphics', keywords: ['motion graphics'] },
+    { label: 'Proposal & Docs', keywords: ['proposal'] },
+    { label: 'Annual Report' },
+    { label: 'Infographics' },
+    { label: 'Corporate Video' },
+    { label: 'Packaging Design', keywords: ['packaging'] },
   ],
 ]

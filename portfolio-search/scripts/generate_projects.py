@@ -5,6 +5,8 @@ Usage (from the portfolio-search folder):
 
 To add more projects, add the sheet's Brand Name to INCLUDE
 (value = the name to display on the site). Requires: pip install openpyxl
+
+Only three columns are used: Brand Name, Industry and tags.
 """
 import json
 import re
@@ -23,9 +25,6 @@ INCLUDE = {
     "Arani": "Arani",
     "Infiled": "INFiLED",
 }
-
-FIRST_SERVICE_COLUMN = 6  # "Logo Design" onwards
-
 
 def split_tags(raw):
     seen, tags = set(), []
@@ -47,16 +46,10 @@ def main():
             continue
         data = dict(zip(header, row))
         name = INCLUDE[row[0]]
-        services = [
-            col for col in header[FIRST_SERVICE_COLUMN:]
-            if col and data.get(col) and str(data[col]).strip() not in ("-", "--")
-        ]
         projects.append({
             "id": re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"),
             "name": name,
             "industry": data["Industry"],
-            "description": " ".join((data["Description"] or "").split()),
-            "services": services,
             "tags": split_tags(data["tags"]),
         })
 
