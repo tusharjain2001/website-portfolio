@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-blue: #65a0cf;
+  --color-brand-deep: #0060ab;
+  --color-brand-coral: #ff988d;
+  --color-brand-red: #e94d3d;
+  --color-chip: #98aebf;
+  --color-soft: #c1c1c1;
+  --color-placeholder: #a9a9a9;
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-black font-sans text-white antialiased;
+    font-variation-settings: "opsz" 14;
+  }
+}
+
+@utility bg-page {
+  background-image: linear-gradient(119.82deg, rgb(0 0 0) 0%, rgb(0 36 69) 120%);
+}
+
+@utility text-gradient-brand {
+  background-image: linear-gradient(153.23deg, #0060ab 11.17%, #65a0cf 36.84%, #ff988d 67.93%, #e94d3d 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+/* 2px gradient outline that keeps the translucent fill (Get in Touch button). */
+@utility border-gradient-brand {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(rgb(255 255 255 / 0.05), rgb(255 255 255 / 0.05)) padding-box,
+    linear-gradient(rgb(0 0 0), rgb(0 0 0)) padding-box,
+    linear-gradient(90deg, #65a0cf 0%, #ff988d 100%) border-box;
+}
+
+/* Film grain on project cards. */
+@utility bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
